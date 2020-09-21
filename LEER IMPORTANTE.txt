@@ -1,0 +1,6 @@
+1. Los resultados de los wordcounts son algo pesados, se deja adjunto el link de la nube donde estan dichos archivos.
+
+https://drive.google.com/drive/folders/1uyOakodp94-bZV9M1PvJ3THV5Mc77W5X?usp=sharing
+
+
+2. La Carpeta "Resultados" estan los resultados donde las palabras son mas de 5000 veces repetidas

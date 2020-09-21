@@ -1,0 +1,35 @@
+/* Crear un directorio en el HDFS para subir el dataset */
+/* Estar ubicado donde esta el dataset */
+
+[Este crea una carpeta en el hdfs]
+hdfs dfs -mkdir /Input
+
+[Este mete el dataset en el caperta hdfs que se creo anteriormente]
+hdfs dfs -put dataset.txt /Input
+
+
+/* PARA CORRER ES MEJOR TENER UNA TERMINAL UBICADA DONDE ESTAN LOS JARS */
+
+WordCount 1 (1 palabra) [2 formas]
+hadoop jar /ProyectoConcu_Cesar_Oswaldo\WordCountJars\WordCount1\WordCount.jar WordCount /Input /Output_wordcount1
+
+[Esta funciona si la terminal esta ubicada donde esta el .jar]
+hadoop jar WordCount.jar WordCount /Input /Output_wordcount1
+
+
+WordCount 2 (2 palabra) [2 formas]
+hadoop jar /ProyectoConcu_Cesar_Oswaldo\WordCountJars\WordCount2\WordCount.jar WordCount /Input /Output_wordcount2
+
+[Esta funciona si la terminal esta ubicada donde esta el .jar]
+hadoop jar WordCount.jar WordCount /Input /Output_wordcount2
+
+
+/* UNA VES YA CORRIDO LOS WORDCOUNTS */
+
+[Obtener el archivo donde contiene las palabras que ejecuto el wordcount a donde se esta ubicado]
+
+[Este es el wordcount de una palabra]
+hdfs dfs -get /Output_wordcount1/part-r-00000
+
+[Este es el wordcount de una palabra]
+hdfs dfs -get /Output_wordcount2/part-r-00000
